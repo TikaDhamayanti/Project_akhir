@@ -18,7 +18,6 @@ class Pesanan extends CI_Controller
             'diproses' => $this->M_transaksi->proses(),
             'dikirim' => $this->M_transaksi->dikirim(),
             'diterima' => $this->M_transaksi->diterima(),
-            'pelanggan' => $this->db->get_where('pelanggan', ['email' => $this->session->userdata('email')])->row_array()
         );
         $this->load->view('template_user/header', $data);
         $this->load->view('template_user/topbar', $data);

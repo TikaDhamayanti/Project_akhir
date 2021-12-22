@@ -96,8 +96,4 @@ class Keranjang extends CI_Controller
         $this->cart->destroy();
         redirect('keranjang');
     }
-
-    public function proses_checkout()
-    {
-    }
 }

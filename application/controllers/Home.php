@@ -15,7 +15,6 @@ class Home extends CI_Controller
         $data = array(
             'title' => 'Laperpool',
             'barang' => $this->M_home->get_all_data(),
-            'pelanggan' => $this->db->get_where('pelanggan', ['email' => $this->session->userdata('email')])->row_array()
         );
 
         $this->load->view('template_user/header', $data);
