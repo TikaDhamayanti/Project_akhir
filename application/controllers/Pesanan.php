@@ -41,7 +41,7 @@ class Pesanan extends CI_Controller
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']          = './assets/bukti_bayar';
-            $config['allowed_types']        = 'gif|jpg|png|jfif|jpeg';
+            $config['allowed_types']        = 'jpg|png|jfif|jpeg';
             $config['max_width']            = 2000;
             $this->upload->initialize($config);
             $field_name = 'bukti_bayar';

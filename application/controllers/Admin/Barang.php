@@ -66,7 +66,6 @@ class Barang extends CI_Controller
                 $this->session->set_flashdata('name', 'value');
             }
         }
-
         $data = array(
             'title' => 'Add Barang',
             'kategori' => $this->M_kategori->get_all_data(),
@@ -88,7 +87,6 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required', [
             'required' => 'This field is required!'
         ]);
-
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']          = './uploads/';
             $config['allowed_types']        = 'gif|jpg|png|jfif|jpeg';
@@ -136,7 +134,6 @@ class Barang extends CI_Controller
             );
             $this->M_barang->edit($data);
         }
-
         $data = array(
             'title' => 'Add Barang',
             'kategori' => $this->M_kategori->get_all_data(),
